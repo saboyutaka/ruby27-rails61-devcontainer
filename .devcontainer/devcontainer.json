@@ -1,0 +1,35 @@
+{
+  "name": "Rails dev",
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "runServices": [
+    "app",
+    "postgres"
+    // "webpacker"
+  ],
+  "settings": {
+    "ruby.useBundler": true,
+    "ruby.useLanguageServer": true,
+    "ruby.format": "rufo",
+    "solargraph.useBundler": true,
+    "files.associations": {
+      "Gemfile": "ruby"
+    }
+  },
+  "extensions": [
+    "rebornix.Ruby",
+    "castwide.solargraph",
+    "elia.erb-formatter",
+    "redhat.vscode-yaml",
+    "jemmyw.rails-fast-nav",
+    "aki77.rails-db-schema",
+    "hridoy.rails-snippets",
+    "kaiwood.endwise",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "esbenp.prettier-vscode"
+  ],
+  "initializeCommand": "if ! [ -f .env ];then cp .env.sample .env;fi",
+  "postCreateCommand": "bundle install --path vendor/bundle",
+  "postStartCommand": "if [ -f /workspace/bin/setup ];then /workspace/bin/setup;fi"
+}

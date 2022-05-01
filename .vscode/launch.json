@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Rails",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": [
+        "server"
+      ],
+      "useBundler": true,
+      "env": {
+        "WEB_CONCURRENCY": 0
+      }
+    }
+  ]
+}
