@@ -30,6 +30,6 @@
     "esbenp.prettier-vscode"
   ],
   "initializeCommand": "if ! [ -f .env ];then cp .env.sample .env;fi",
-  "postCreateCommand": "bundle install --path vendor/bundle",
+  "postCreateCommand": "bundle install --path vendor/bundle && bundle exec solargraph bundle",
   "postStartCommand": "if [ -f /workspace/bin/setup ];then /workspace/bin/setup;fi"
 }
