@@ -3,11 +3,7 @@
   "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
   "service": "app",
   "workspaceFolder": "/workspace",
-  "runServices": [
-    "app",
-    "postgres"
-    // "webpacker"
-  ],
+  "runServices": ["app", "postgres", "webpacker"],
   "settings": {
     "ruby.useBundler": true,
     "ruby.useLanguageServer": true,
