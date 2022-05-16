@@ -22,4 +22,7 @@ ENV LANG ja_JP.UTF-8
 ARG BUNDLER_VERSION='2.3.13'
 RUN gem install bundler -v ${BUNDLER_VERSION}
 
+# Install heroku command
+RUN curl https://cli-assets.heroku.com/install.sh | sh
+
 WORKDIR /workspace
