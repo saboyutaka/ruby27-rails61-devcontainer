@@ -6,7 +6,6 @@
   "runServices": ["app", "postgres", "webpacker"],
   "settings": {
     "ruby.useBundler": true,
-    "ruby.useLanguageServer": true,
     "ruby.format": "rufo",
     "solargraph.useBundler": true,
     "files.associations": {
